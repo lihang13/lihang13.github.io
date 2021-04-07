@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://lihang13.github.io/favicon.ico?v=1617780688383">
+<link rel="shortcut icon" href="https://lihang13.github.io/favicon.ico?v=1617787421796">
 <link rel="stylesheet" href="https://lihang13.github.io/styles/main.css">
 
 
@@ -18,23 +18,23 @@
 
 
 
-    <meta name="description" content="#Jquery-day02笔记
+    <meta name="description" content="
+
+
 Jquery动画
-素材
 
 01-显示隐藏动画
+02-显示隐藏动画
+03-显示隐藏动画
 
 
-默认显示和隐藏方式
+Jquery遍历
 
-
-show([speed,[easing],[fn]])
-
-
-参数：
-
-
-speed：动画的速度。三个预定义的值(&quot;slow&..." />
+js的遍历方式
+jq对象.each(callback)
+回调函数
+$.each(object, [callback])
+for....." />
     <meta name="keywords" content="jquery" />
   </head>
   <body>
@@ -44,7 +44,7 @@ speed：动画的速度。三个预定义的值(&quot;slow&..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://lihang13.github.io">
-        <img src="https://lihang13.github.io/images/avatar.png?v=1617780688383" class="site-logo">
+        <img src="https://lihang13.github.io/images/avatar.png?v=1617787421796" class="site-logo">
         <h1 class="site-title">个人笔记</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -110,10 +110,33 @@ speed：动画的速度。三个预定义的值(&quot;slow&..." />
             <div class="post-date">2021-04-07</div>
             
             <div class="post-content" v-pre>
-              <p>#Jquery-day02笔记</p>
+              <p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#jquery%E5%8A%A8%E7%94%BB">Jquery动画</a>
+<ul>
+<li><a href="#01-%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E5%8A%A8%E7%94%BB">01-显示隐藏动画</a></li>
+<li><a href="#02-%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E5%8A%A8%E7%94%BB">02-显示隐藏动画</a></li>
+<li><a href="#03-%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E5%8A%A8%E7%94%BB">03-显示隐藏动画</a></li>
+</ul>
+</li>
+<li><a href="#jquery%E9%81%8D%E5%8E%86">Jquery遍历</a>
+<ul>
+<li><a href="#js%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F">js的遍历方式</a></li>
+<li><a href="#jq%E5%AF%B9%E8%B1%A1eachcallback">jq对象.each(callback)</a></li>
+<li><a href="#%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0">回调函数</a></li>
+<li><a href="#eachobject-callback">$.each(object, [callback])</a></li>
+<li><a href="#forof">for..of:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br>
+#Jquery-day02笔记</p>
 <h2 id="jquery动画">Jquery动画</h2>
 <p><strong>素材</strong></p>
-<figure data-type="image" tabindex="1"><img src="day04.assets/image-20210311170957233.png" alt="image-20210311170957233" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://lihang13.github.io/post-images/1617787326206.png" alt="image-20210311170957233" loading="lazy"></figure>
 <h3 id="01-显示隐藏动画">01-显示隐藏动画</h3>
 <ol>
 <li>
@@ -127,7 +150,7 @@ speed：动画的速度。三个预定义的值(&quot;slow&..." />
 <ol>
 <li>
 <p>speed：动画的速度。三个预定义的值(&quot;slow&quot;,&quot;normal&quot;, &quot;fast&quot;)或表示动画时长的毫秒数值(如：1000)</p>
-<ol start="2">
+<ol>
 <li>
 <p>easing：用来指定切换效果，默认是&quot;swing&quot;，可用参数&quot;linear&quot;</p>
 <ul>
@@ -137,7 +160,7 @@ speed：动画的速度。三个预定义的值(&quot;slow&..." />
 </ul>
 </li>
 </ul>
-<ol start="3">
+<ol>
 <li>fn：在动画完成时执行的函数，每个元素执行一次。</li>
 </ol>
 </li>

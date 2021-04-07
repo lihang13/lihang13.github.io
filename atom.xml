@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lihang13.github.io</id>
     <title>个人笔记</title>
-    <updated>2021-04-07T07:31:31.076Z</updated>
+    <updated>2021-04-07T09:24:31.326Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lihang13.github.io"/>
     <link rel="self" href="https://lihang13.github.io/atom.xml"/>
@@ -16,10 +16,33 @@
         <link href="https://lihang13.github.io/post/jquery-day02-bi-ji/">
         </link>
         <updated>2021-04-07T07:25:43.000Z</updated>
-        <content type="html"><![CDATA[<p>#Jquery-day02笔记</p>
+        <content type="html"><![CDATA[<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#jquery%E5%8A%A8%E7%94%BB">Jquery动画</a>
+<ul>
+<li><a href="#01-%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E5%8A%A8%E7%94%BB">01-显示隐藏动画</a></li>
+<li><a href="#02-%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E5%8A%A8%E7%94%BB">02-显示隐藏动画</a></li>
+<li><a href="#03-%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E5%8A%A8%E7%94%BB">03-显示隐藏动画</a></li>
+</ul>
+</li>
+<li><a href="#jquery%E9%81%8D%E5%8E%86">Jquery遍历</a>
+<ul>
+<li><a href="#js%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F">js的遍历方式</a></li>
+<li><a href="#jq%E5%AF%B9%E8%B1%A1eachcallback">jq对象.each(callback)</a></li>
+<li><a href="#%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0">回调函数</a></li>
+<li><a href="#eachobject-callback">$.each(object, [callback])</a></li>
+<li><a href="#forof">for..of:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br>
+#Jquery-day02笔记</p>
 <h2 id="jquery动画">Jquery动画</h2>
 <p><strong>素材</strong></p>
-<figure data-type="image" tabindex="1"><img src="day04.assets/image-20210311170957233.png" alt="image-20210311170957233" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://lihang13.github.io/post-images/1617787326206.png" alt="image-20210311170957233" loading="lazy"></figure>
 <h3 id="01-显示隐藏动画">01-显示隐藏动画</h3>
 <ol>
 <li>
@@ -33,7 +56,7 @@
 <ol>
 <li>
 <p>speed：动画的速度。三个预定义的值(&quot;slow&quot;,&quot;normal&quot;, &quot;fast&quot;)或表示动画时长的毫秒数值(如：1000)</p>
-<ol start="2">
+<ol>
 <li>
 <p>easing：用来指定切换效果，默认是&quot;swing&quot;，可用参数&quot;linear&quot;</p>
 <ul>
@@ -43,7 +66,7 @@
 </ul>
 </li>
 </ul>
-<ol start="3">
+<ol>
 <li>fn：在动画完成时执行的函数，每个元素执行一次。</li>
 </ol>
 </li>
