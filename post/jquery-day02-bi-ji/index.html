@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Jquery-day02笔记 | 个人笔记</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://lihang13.github.io/favicon.ico?v=1617780412681">
+<link rel="stylesheet" href="https://lihang13.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="#Jquery-day02笔记
+Jquery动画
+素材
+
+01-显示隐藏动画
+
+
+默认显示和隐藏方式
+
+
+show([speed,[easing],[fn]])
+
+
+参数：
+
+
+speed：动画的速度。三个预定义的值(&quot;slow&..." />
+    <meta name="keywords" content="jquery" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://lihang13.github.io">
+        <img src="https://lihang13.github.io/images/avatar.png?v=1617780412681" class="site-logo">
+        <h1 class="site-title">个人笔记</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://lihang13.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Jquery-day02笔记</h2>
+            <div class="post-date">2021-04-07</div>
+            
+            <div class="post-content" v-pre>
+              <p>#Jquery-day02笔记</p>
+<h2 id="jquery动画">Jquery动画</h2>
+<p><strong>素材</strong></p>
+<figure data-type="image" tabindex="1"><img src="day04.assets/image-20210311170957233.png" alt="image-20210311170957233" loading="lazy"></figure>
+<h3 id="01-显示隐藏动画">01-显示隐藏动画</h3>
+<ol>
+<li>
+<p>默认显示和隐藏方式</p>
+<ol>
+<li>
+<p>show([speed,[easing],[fn]])</p>
+<ol>
+<li>
+<p>参数：</p>
+<ol>
+<li>
+<p>speed：动画的速度。三个预定义的值(&quot;slow&quot;,&quot;normal&quot;, &quot;fast&quot;)或表示动画时长的毫秒数值(如：1000)</p>
+<ol start="2">
+<li>
+<p>easing：用来指定切换效果，默认是&quot;swing&quot;，可用参数&quot;linear&quot;</p>
+<ul>
+<li>swing：动画执行时效果是 先慢，中间快，最后又慢
+<ul>
+<li>linear：动画执行时速度是匀速的</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>fn：在动画完成时执行的函数，每个元素执行一次。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<pre><code class="language-js">&lt;script&gt;
+	// 2. hide([speed,[easing],[fn]])  隐藏
+	//fn 回调函数(函数)
+	//隐藏
+	function hideFn(){
+		$(&quot;#showDiv&quot;).hide(1000,&quot;linear&quot;);
+		
+	}
+	//显示
+	function showFn() {
+		$(&quot;#showDiv&quot;).show(1000,&quot;linear&quot;);
+	}
+	//隐藏和显示
+	function toggleFn(){
+		$(&quot;#showDiv&quot;).toggle(1000,&quot;linear&quot;);
+	}
+
+&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type=&quot;button&quot; value=&quot;点击按钮隐藏div&quot; onclick=&quot;hideFn()&quot;&gt;
+&lt;input type=&quot;button&quot; value=&quot;点击按钮显示div&quot; onclick=&quot;showFn()&quot;&gt;
+&lt;input type=&quot;button&quot; value=&quot;点击按钮切换div显示和隐藏&quot; onclick=&quot;toggleFn()&quot;&gt;
+
+&lt;div id=&quot;showDiv&quot; style=&quot;width:300px;height:300px;background:pink&quot;&gt;
+    div显示和隐藏
+&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<h3 id="02-显示隐藏动画">02-显示隐藏动画</h3>
+<ol start="2">
+<li>滑动显示和隐藏方式
+<ol>
+<li>slideDown([speed],[easing],[fn]) *显示</li>
+<li>slideUp([speed,[easing],[fn]])  *隐藏</li>
+<li>slideToggle([speed],[easing],[fn]) *切换</li>
+</ol>
+</li>
+</ol>
+<pre><code class="language-js">&lt;script&gt;
+/*2. 滑动显示和隐藏方式
+			1. slideDown([speed],[easing],[fn])
+			2. slideUp([speed,[easing],[fn]])  隐藏
+			3. slideToggle([speed],[easing],[fn])*/
+
+//隐藏
+function hideFn(){
+	$(&quot;#showDiv&quot;).slideUp(2000,&quot;linear&quot;);	
+}
+//显示
+function showFn(){
+	$(&quot;#showDiv&quot;).slideDown(2000,&quot;linear&quot;);
+}
+//切换效果
+function toggleFn(){
+	$(&quot;#showDiv&quot;).slideToggle(2000,&quot;linear&quot;);
+}
+	
+&lt;/script&gt;
+</code></pre>
+<h3 id="03-显示隐藏动画">03-显示隐藏动画</h3>
+<ol start="3">
+<li>淡入淡出显示和隐藏方式
+<ol>
+<li>fadeIn([speed],[easing],[fn])  *显示</li>
+<li>fadeOut([speed],[easing],[fn])  *隐藏</li>
+<li>fadeToggle([speed,[easing],[fn]]) *切换</li>
+</ol>
+</li>
+</ol>
+<pre><code class="language-js">&lt;script&gt;
+/*			3. 淡入淡出显示和隐藏方式
+			1. fadeIn([speed],[easing],[fn])  *显示
+			2. fadeOut([speed],[easing],[fn])  *隐藏
+			3. fadeToggle([speed,[easing],[fn]]) *切换*/
+//隐藏			
+function hideFn(){
+	$(&quot;#showDiv&quot;).fadeOut(3000);
+
+}
+//显示
+function showFn(){
+		$(&quot;#showDiv&quot;).fadeIn(3000);
+}
+
+//切换
+function toggleFn(){
+	$(&quot;#showDiv&quot;).fadeToggle(3000);
+	
+}
+</code></pre>
+<h2 id="jquery遍历">Jquery遍历</h2>
+<p><strong>素材</strong></p>
+<pre><code class="language-html">&lt;ul id=&quot;city&quot;&gt;
+    &lt;li&gt;北京&lt;/li&gt;
+    &lt;li&gt;上海&lt;/li&gt;
+    &lt;li&gt;天津&lt;/li&gt;
+    &lt;li&gt;重庆&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<h3 id="js的遍历方式">js的遍历方式</h3>
+<pre><code class="language-js">    &lt;script type=&quot;text/javascript&quot;&gt;
+    	
+    	 $(function(){
+    	 	//js的便利
+    	 	var cc= $(&quot;#city li&quot;);
+    	 	
+    	 	for(var i=0;i&lt;cc.length;i++){
+    	 		//js对象
+    	 		//alert(cc[i].innerHTML); 
+    	 		
+    	 		//jquery对象获取值
+    	 		alert($(cc[i]).html());	
+    	 	}	 	
+    	 })
+    &lt;/script&gt;
+</code></pre>
+<h3 id="jq对象eachcallback">jq对象.each(callback)</h3>
+<p><strong>带一个参数的</strong></p>
+<pre><code class="language-js">    &lt;script type=&quot;text/javascript&quot;&gt;
+    	
+    	 $(function(){
+    	 	
+    	 	//i表示索引
+    	 $(&quot;li&quot;).each(function(i){
+    	 	var cc=$(this).html();
+    	 	alert(&quot;序号:&quot;+(i+1)+&quot;  ： &quot;+cc);
+    	 });	 	
+    	 	
+    	 })
+
+    &lt;/script&gt;
+</code></pre>
+<p><strong>带两个参数的</strong></p>
+<pre><code class="language-js">    &lt;script type=&quot;text/javascript&quot;&gt;
+    	
+    	 $(function(){	
+    	 $(&quot;li&quot;).each(function(index,vv){
+    	 	//vv =this 是js对象
+    	   alert(index+&quot;  ：  &quot;+$(vv).html());
+    	 });	
+    	 })
+    &lt;/script&gt;
+</code></pre>
+<h3 id="回调函数">回调函数</h3>
+<pre><code class="language-js">回调函数返回值：
+				*如果当前function返回为false，则结束循环(break)。
+				* 如果当前function返回为true，则结束本次循环，继续下次循环(continue)
+</code></pre>
+<h3 id="eachobject-callback">$.each(object, [callback])</h3>
+<pre><code class="language-js">    &lt;script type=&quot;text/javascript&quot;&gt;
+    	
+    	 $(function(){
+    	 		//参数1:遍历的对象 
+    	 		//参数2:回调函数
+    	 		var obj= $(&quot;li&quot;);
+    	 		$.each(obj,function(){
+    	 			var str= $(this).html();
+    	 			alert(str);
+    	 		});
+    	 })
+    &lt;/script&gt;
+</code></pre>
+<h3 id="forof">for..of:</h3>
+<p>jquery 3.0 版本之后提供的方式<br>
+for(元素对象 of 容器对象)</p>
+<pre><code class="language-js">    &lt;script type=&quot;text/javascript&quot;&gt;
+    	
+    	 $(function(){
+    	 	//容器对象:需要遍历的对象或数组
+    	 	//元素对象 接受遍历的变量
+    	 	//for(元素对象 of 容器对象)
+    	 	var str= $(&quot;li&quot;);
+    	   for(cc of str){
+    	   	alert($(cc).html());
+    	   } 	
+    	 })
+    &lt;/script&gt;
+</code></pre>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://lihang13.github.io/tag/D2B61Jd5b/" class="tag">
+                    jquery
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://lihang13.github.io/post/jquery-day01-bi-ji/">
+                  <h3 class="post-title">
+                    Jquery-day01笔记
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
